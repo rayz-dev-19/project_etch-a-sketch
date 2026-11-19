@@ -1,0 +1,17 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+}
+
+.squares {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.hovered {
+    background-color: black;
+}
