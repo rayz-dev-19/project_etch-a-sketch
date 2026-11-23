@@ -8,7 +8,7 @@ let newSize;
 
 let grid = document.getElementById("grid");
 grid.addEventListener("click", () => {
-     rawInput = prompt("Grid size", "1-100");
+    rawInput = prompt("Grid size", "1-100");
     if (rawInput === null) {
         return;
     }
@@ -27,15 +27,19 @@ createGrid(16);
 
 function createGrid(size) {
     container.innerHTML = "";
-     
-     console.log("size inside createGrid:", size);
+
+    console.log("size inside createGrid:", size);
     for (let k = 0; k < size * size; k++) {
         let squares = document.createElement('div');
         squares.className = "squares";
         container.appendChild(squares);
 
+        function randomNum() {
+            return Math.floor(Math.random() * 256);
+        };
+
         squares.addEventListener("mouseenter", (e) => {
-            squares.classList.add("hovered");
+            squares.style.backgroundColor = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`
         })
         const squareSize = 800 / size;
         squares.style.width = `${squareSize}px`;
@@ -47,7 +51,9 @@ function createGrid(size) {
 let clear = document.getElementById("clear");
 clear.addEventListener("click", (e) => {
     document.querySelectorAll(".squares").forEach((square) => {
-        square.classList.remove("hovered");
+        square.style.backgroundColor = "";
     })
 });
+
+
 
