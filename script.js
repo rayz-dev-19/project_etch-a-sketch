@@ -44,3 +44,10 @@ function createGrid(size) {
 }
 
 
+let clear = document.getElementById("clear");
+clear.addEventListener("click", (e) => {
+    document.querySelectorAll(".squares").forEach((square) => {
+        square.classList.remove("hovered");
+    })
+});
+

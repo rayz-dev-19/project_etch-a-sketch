@@ -6,13 +6,27 @@
     margin:auto;
 }
 
+.gricle {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+}
+
+
 #grid{
     display: flex;
-    margin: 0px auto;
+    
     padding: 15px 25px 15px 25px;
     font-size: 25px;
-    margin-bottom: 15px;
 }
+
+#clear {
+    display: flex;
+    
+    padding: 15px 25px 15px 25px;
+    font-size: 24px;
+}
+
 
 .squares {
     border: 1px solid rgba(110, 110, 110, 0.186);
